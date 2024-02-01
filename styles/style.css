@@ -15,6 +15,51 @@
 */
 
 .page {
+  max-inline-size: 1440px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background: var(--bg-color);
+  font-family: var(--main-font), Inter;
+  font-weight: var(--wgth);
+  color: var(--font-color);
+}
+
+.header {
+  padding-block: 105px 25px;
+  margin: 100px auto;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  border: 2px solid #00cc14;
+}
+
+.header__title {
+  font-size: 49px;
+  margin-block-end: 20px;
+  text-align: center;
+}
+
+.header__subtitle {
+  font-size: 14px;
+  margin-block-end: 25px;
+  text-align: center;
+}
+
+.theme-menu {
+  margin: 0 auto;
+}
+
+.theme-menu__list {
+  display:grid;
+  gap: 14px;
+  justify-content: center;
+}
+
+.theme-menu__button {
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
 }
