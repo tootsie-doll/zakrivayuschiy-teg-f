@@ -24,9 +24,18 @@
   color: var(--font-color);
 }
 
+
+.header__group {
+  min-height: 527px;
+  width: 100vw;
+  display: grid;
+  justify-content: stretch;
+  align-content: center;
+}
 .header {
+  width: 100%;
+  background: var(--bg-color);
   padding-block: 105px 25px;
-  margin: 100px auto;
   font-family: var(--accent-font);
   text-transform: uppercase;
   border: 2px solid #00cc14;
