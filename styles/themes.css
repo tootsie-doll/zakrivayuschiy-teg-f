@@ -4,3 +4,85 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+/*Стили светлой темы*/
+.theme-light {
+    :root {
+        --bg-color: #fff;
+        --main-color: #000;
+        --multi-repeating-linear:
+        repeating-linear-gradient(
+                to right,
+                #d3d3d3 0 2px,
+                transparent 4px
+        ),
+        repeating-linear-gradient(
+                to bottom,
+                #d3d3d3 0 2px,
+                transparent 4px
+        ),
+        linear-gradient(#e7e7e7, #1a1a1a);
+        background-size: cover;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #fff;
+        --main-color: #000;
+        --multi-repeating-linear:
+        repeating-linear-gradient(
+                to right,
+                #d3d3d3 0 2px,
+                transparent 4px
+        ),
+        repeating-linear-gradient(
+                to bottom,
+                #d3d3d3 0 2px,
+                transparent 4px
+        ),
+        linear-gradient(#e7e7e7, #1a1a1a);
+        background-size: cover;
+    }
+}
+
+/*Стили темной темы*/
+.theme-dark {
+    :root {
+        --bg-color: #000;
+        --main-color: #00CC14;
+        --multi-repeating-linear:
+        repeating-linear-gradient(
+                to right,
+                #000 0 2px,
+                transparent 4px
+        ),
+        repeating-linear-gradient(
+                to bottom,
+                #000 0 2px,
+                transparent 4px
+        ),
+        linear-gradient(#007f0c, #004306);
+        background-size: cover;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #000;
+        --main-color: #00CC14;
+        --multi-repeating-linear:
+        repeating-linear-gradient(
+                to right,
+                #000 0 2px,
+                transparent 4px
+        ),
+        repeating-linear-gradient(
+                to bottom,
+                #000 0 2px,
+                transparent 4px
+        ),
+        linear-gradient(#007f0c, #004306);
+        background-size: cover;
+    }
+}
