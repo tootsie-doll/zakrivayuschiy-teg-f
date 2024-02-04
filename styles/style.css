@@ -37,6 +37,7 @@
 }
 
 .header {
+  position: relative;
   margin: 0 auto;
   max-inline-size: 700px;
   margin-block-start: -590px;
@@ -57,6 +58,7 @@
 
 .header__subtitle {
   padding-block-start: 20px;
+  font-size:14px;
   text-align: center;
 }
 
@@ -119,15 +121,23 @@
   position: absolute;
   top:25px;
   right: 11px;
-  color: var(--main-color, #000);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--bg-color, #FFF);
+  color: var(--main-color);
+  text-shadow: var(--text-shadow);
   font-family: var(--accent-font);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+}
+
+@supports ((text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color))) {
+  .label {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--stroke-color);
+    text-shadow: none;
+    text-stroke: 1px var(--stroke-color);
+  }
 }
 
 .card__picture {
@@ -195,3 +205,23 @@
   border: none;
 }
 
+/*Медиазапросы*/
+
+@media(width >375px) {
+  .content {
+    min-height: 960px;
+  }
+
+  .header {
+    margin-block-start: -870px;
+  }
+
+  .header__title {
+    padding-block-start: 136px;
+    font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  }
+
+  .header__subtitle {
+    font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  }
+}

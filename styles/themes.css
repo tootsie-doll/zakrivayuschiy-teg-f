@@ -7,43 +7,28 @@
 
 /*Стили светлой темы*/
 
-    :root.theme-light {
-        --bg-color: #fff;
-        --main-color: #000;
-        --multi-repeating-linear:
-        repeating-linear-gradient(
-                to right,
-                #d3d3d3 0 2px,
-                transparent 4px
-        ),
-        repeating-linear-gradient(
-                to bottom,
-                #d3d3d3 0 2px,
-                transparent 4px
-        ),
-        linear-gradient(#e7e7e7, #1a1a1a);
-        background-size: cover;
-    }
-
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --bg-color: #fff;
-        --main-color: #000;
-        --multi-repeating-linear:
-        repeating-linear-gradient(
-                to right,
-                #d3d3d3 0 2px,
-                transparent 4px
-        ),
-        repeating-linear-gradient(
-                to bottom,
-                #d3d3d3 0 2px,
-                transparent 4px
-        ),
-        linear-gradient(#e7e7e7, #1a1a1a);
-        background-size: cover;
-    }
+:root.theme-light {
+    --bg-color: #fff;
+    --main-color: #000;
+    --multi-repeating-linear:
+    repeating-linear-gradient(
+            to right,
+            #d3d3d3 0 2px,
+            transparent 4px
+    ),
+    repeating-linear-gradient(
+            to bottom,
+            #d3d3d3 0 2px,
+            transparent 4px
+    ),
+    linear-gradient(#e7e7e7, #1a1a1a);
+    background-size: cover;
+    --text-shadow:
+    -1px 0 #fff,
+    0 1px #fff,
+    1px 0 #fff,
+    0 -1px #fff;
+    --stroke-color: var(--bg-color);
 }
 
 /*Стили темной темы*/
@@ -51,8 +36,7 @@
     :root.theme-dark {
         --bg-color: #000;
         --main-color: #00CC14;
-        --multi-repeating-linear:
-        repeating-linear-gradient(
+        --multi-repeating-linear: repeating-linear-gradient(
                 to right,
                 #000 0 2px,
                 transparent 4px
@@ -64,25 +48,35 @@
         ),
         linear-gradient(#007f0c, #004306);
         background-size: cover;
+        --text-shadow:
+        -1px 0 #000,
+        0 1px #000,
+        1px 0 #000,
+        0 -1px #000;
+        --stroke-color: var(--bg-color);
     }
-
 
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #000;
         --main-color: #00CC14;
-        --multi-repeating-linear:
-        repeating-linear-gradient(
+        --multi-repeating-linear: repeating-linear-gradient(
                 to right,
                 #000 0 2px,
                 transparent 4px
-        ),
-        repeating-linear-gradient(
+        ), repeating-linear-gradient(
                 to bottom,
                 #000 0 2px,
                 transparent 4px
-        ),
-        linear-gradient(#007f0c, #004306);
+        ), linear-gradient(#007f0c, #004306);
         background-size: cover;
+        --text-shadow:
+                -1px 0 #000,
+                0 1px #000,
+                1px 0 #000,
+                0 -1px #000;
+        --stroke-color: var(--bg-color);
     }
 }
+
+
