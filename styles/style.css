@@ -289,10 +289,14 @@
   width: 28px;
   height: 28px;
   stroke-width: 1;
+  mix-blend-mode: difference;
+  color: var(--bg-color);
 }
 
 .footer__button-text {
   padding-block-start: 8px;
+  mix-blend-mode: difference;
+  color: var(--bg-color);
 }
 
 .footer__button:focus {
