@@ -258,7 +258,12 @@
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 0.9;
+  z-index:1;
+  mix-blend-mode: difference;
+  color: var(--bg-color);
 }
+
+
 
 .footer{
   width: 100%;
