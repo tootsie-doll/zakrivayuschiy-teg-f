@@ -6,8 +6,8 @@
 */
 
 /*Стили светлой темы*/
-.theme-light {
-    :root {
+
+    :root.theme-light {
         --bg-color: #fff;
         --main-color: #000;
         --multi-repeating-linear:
@@ -24,7 +24,7 @@
         linear-gradient(#e7e7e7, #1a1a1a);
         background-size: cover;
     }
-}
+
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -47,8 +47,8 @@
 }
 
 /*Стили темной темы*/
-.theme-dark {
-    :root {
+
+    :root.theme-dark {
         --bg-color: #000;
         --main-color: #00CC14;
         --multi-repeating-linear:
@@ -65,7 +65,7 @@
         linear-gradient(#007f0c, #004306);
         background-size: cover;
     }
-}
+
 
 @media (prefers-color-scheme: dark) {
     :root {
