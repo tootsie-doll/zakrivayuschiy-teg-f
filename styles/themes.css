@@ -6,28 +6,54 @@
 */
 
 :root.theme-light {
-
+    --button-text--color: #fff;
+    --bg-color: #fff;
+    --accent-color: #000;
+    --main-font:'Inter-Variable';
+    --accent-font:'PressStart2P';
+    --wgth-text: 400;
+    --wgth-title: 700;
+    --brd: 2px solid var(--accent-color);
+    --multi-repeating-linear:
+            repeating-linear-gradient(
+                    to right,
+                    #d3d3d3 0 2px,
+                    transparent 4px
+            ),
+            repeating-linear-gradient(
+                    to bottom,
+                    #d3d3d3 0 2px,
+                    transparent 4px
+            ),
+            linear-gradient(#e7e7e7, #1a1a1a);
+    background-size: cover;
+    --text-shadow:  -1px 0 #fff,
+    0 1px #fff,
+    1px 0 #fff,
+    0 -1px #fff;
+    --stroke-color: var(--bg-color);
+    --transition: 0.5s ease;
 }
 
-
 :root.theme-dark {
+    --button-text--color: #00CC14;
     --bg-color: #000;
     --accent-color: #00CC14;
     --wgth-text: 465;
     --wgth-title: 785;
     --brd: 2px solid var(--accent-color);
     --multi-repeating-linear:
-            repeating-linear-gradient(
-                    to right,
-                    #000 0 2px,
-                    transparent 4px
-            ),
-            repeating-linear-gradient(
-                    to bottom,
-                    #000 2px,
-                    transparent 4px
-            ),
-            linear-gradient(#007f0c, #004306);
+    repeating-linear-gradient(
+            to right,
+            #000 0 2px,
+            transparent 4px
+    ),
+    repeating-linear-gradient(
+            to bottom,
+            #000 2px,
+            transparent 4px
+    ),
+        linear-gradient(#007f0c, #004306);
     background-size: cover;
     --text-shadow:  -1px 0 #000,
     0 1px #000,
@@ -36,3 +62,36 @@
     --stroke-color: var(--bg-color);
     --transition: 0.5s ease;
 }
+
+@media (prefers-color-scheme: dark) {
+    /* Дублируем переменные темной темы */
+    :root {
+        --button-text--color: #00CC14;
+        --bg-color: #000;
+        --accent-color: #00CC14;
+        --wgth-text: 465;
+        --wgth-title: 785;
+        --brd: 2px solid var(--accent-color);
+        --multi-repeating-linear: repeating-linear-gradient(
+                to right,
+                #000 0 2px,
+                transparent 4px
+        ),
+        repeating-linear-gradient(
+                to bottom,
+                #000 2px,
+                transparent 4px
+        ),
+        linear-gradient(#007f0c, #004306);
+        background-size: cover;
+        --text-shadow: -1px 0 #000,
+        0 1px #000,
+        1px 0 #000,
+        0 -1px #000;
+        --stroke-color: var(--bg-color);
+        --transition: 0.5s ease;
+    }
+}
+
+
+
