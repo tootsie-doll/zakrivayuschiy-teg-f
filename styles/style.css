@@ -276,6 +276,7 @@
   font-family: var(--accent-font);
   mix-blend-mode: difference;
   color: var(--button-text--color);
+  padding: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 0.9;
@@ -285,17 +286,30 @@
 .footer{
   position: relative;
   width: 100%;
-  padding-block-end:102px;
+  display: grid;
+  justify-content: center;
+}
+
+.footer__button {
+  width: 306px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+  border: var(--brd);
+  background-color: white;
 }
 
+.floppy {
+  width: 21px;
+  height: 21px;
+}
 
 /*адаптив*/
 
-@media (375px <width <= 1440px){
+@media (375px < width < 1440px){
 
   .container{
     min-block-size: clamp(41.688rem, 35.239rem + 27.512vw, 60rem);
@@ -313,13 +327,17 @@
   .header__title {
     font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   }
-
   .main {
     gap: 54px;
   }
+
+  .footer__button {
+    height: clamp(5rem, 5.638rem + -2.723vw, 3.188rem);
+    width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
+  }
 }
 
-@media (width > 1440px) {
+@media (width >= 1440px) {
 
   .container {
     min-block-size: 960px;
@@ -336,4 +354,11 @@
   .header__title {
     font-size: 23px;
   }
+
+  .footer__button {
+    width: 335px;
+    height: 51px;
+    flex-direction: row;
+  }
+
 }
