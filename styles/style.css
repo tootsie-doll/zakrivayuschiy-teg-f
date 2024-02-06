@@ -229,6 +229,7 @@
 }
 
 .card__icon-button {
+  z-index: 2;
   padding: 0;
   display: grid;
   width: 39px;
@@ -242,7 +243,72 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
+  transition: opacity 0.3s ease;
 }
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.core:hover {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear;
+}
+
+.core:active {
+  fill: var(--sparks-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--sparks-color);
+  transition: fill 0.3s linear;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.main-body:hover {
+  fill: var(--contour-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.main-body:active {
+  fill: var(--sparks-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--sparks-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--sparks-color);
+
+}
+
+.like-icon.is-liked .heart {
+  animation: 0.3s ease-in 0.1s 1 alternate more;
+}
+
+@keyframes more {
+  from {transform: scale(1);}
+  to {transform:scale(1.5);}
+}
+
+.like-icon.is-liked .sparks {
+  animation:  0.3s ease-in 0.3s 1 alternate sparks;
+}
+
+@keyframes sparks {
+  from {opacity: 0;}
+  to {opacity:1;}
+}
+
 
 .sparks{
   opacity: 0;
