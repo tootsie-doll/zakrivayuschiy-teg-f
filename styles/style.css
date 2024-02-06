@@ -225,16 +225,14 @@
   margin-block-end: 25px;
   margin-inline-end: 25px;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .card__icon-button {
-  background: transparent;
-  border: none;
+  padding: 0;
+  display: grid;
   width: 39px;
-  height: 39px;
-  display:flex;
-  flex-direction: column;
+  height: 36px;
   justify-content: center;
 }
 
@@ -244,6 +242,10 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
+}
+
+.sparks{
+  opacity: 0;
 }
 
 .card__like-button {

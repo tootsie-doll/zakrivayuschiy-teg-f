@@ -6,6 +6,8 @@
 */
 
 :root.theme-light {
+    --contour-color: #000;
+    --sparks-color:FF0000;
     --button-text--color: #fff;
     --bg-color: #fff;
     --accent-color: #000;
@@ -36,6 +38,8 @@
 }
 
 :root.theme-dark {
+    --contour-color: #00CC14;
+    --sparks-color:#FF0000;
     --button-text--color: #00CC14;
     --bg-color: #000;
     --accent-color: #00CC14;
@@ -66,6 +70,8 @@
 @media (prefers-color-scheme: dark) {
     /* Дублируем переменные темной темы */
     :root {
+        --sparks-color:#FF0000;
+        --contour-color: #00CC14;
         --button-text--color: #00CC14;
         --bg-color: #000;
         --accent-color: #00CC14;

@@ -1,6 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --button-text--color:#fff;
+    --contour-color: #000;
+    --sparks-color:FF0000;
     --bg-color: #fff;
     --accent-color: #000;
     --main-font:'Inter-Variable';
