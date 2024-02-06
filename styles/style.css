@@ -156,7 +156,7 @@
   display: grid;
   gap: 50px;
   background-color: var(--bg-color);
-  margin-block-end: 54px;
+  margin-block-end: 52px;
 }
 
 .card {
@@ -265,7 +265,6 @@
   transition: 0.5s ease-in-out;
 }
 
-
 .card__like-button:focus  {
   outline:none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
@@ -273,6 +272,7 @@
 }
 
 .button__text {
+  z-index:2;
   font-family: var(--accent-font);
   mix-blend-mode: difference;
   color: var(--button-text--color);
@@ -283,14 +283,17 @@
 }
 
 /*стили футера*/
-.footer{
+.footer {
+  z-index:1;
   position: relative;
   width: 100%;
   display: grid;
   justify-content: center;
+  margin-block-end: 100px;
 }
 
 .footer__button {
+  background-color: var(--bg-color);
   width: 306px;
   height: 80px;
   display: flex;
@@ -299,17 +302,53 @@
   align-items: center;
   gap: 8px;
   border: var(--brd);
-  background-color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .floppy {
+  z-index: 2;
+  position: relative;
+  color: var(--button-text--color);
+  mix-blend-mode: difference;
   width: 21px;
   height: 21px;
 }
 
+.footer__button:focus {
+  outline: none;
+}
+
+.footer__button:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: 0.5s ease-in-out;
+}
+
+.footer__button:hover::before {
+  z-index: 0;
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+
+
+.footer__button:focus  {
+  outline:none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  transition: var(--transition);
+}
+
+
 /*адаптив*/
 
-@media (375px < width < 1440px){
+@media (375px < width <= 1440px){
 
   .container{
     min-block-size: clamp(41.688rem, 35.239rem + 27.512vw, 60rem);
@@ -329,15 +368,18 @@
   }
   .main {
     gap: 54px;
+    margin-block-end: 52px;
   }
 
   .footer__button {
-    height: clamp(5rem, 5.638rem + -2.723vw, 3.188rem);
-    width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
+    width: 335px;
+    height: 51px;
+    flex-direction: row;
+    margin-block-end: 104px;
   }
 }
 
-@media (width >= 1440px) {
+@media (width > 1440px) {
 
   .container {
     min-block-size: 960px;
@@ -353,12 +395,6 @@
 
   .header__title {
     font-size: 23px;
-  }
-
-  .footer__button {
-    width: 335px;
-    height: 51px;
-    flex-direction: row;
   }
 
 }
