@@ -215,9 +215,20 @@
 
 .card__picture {
   width: 100%;
-  height: 100%;
+  height: 375px;
   position: relative;
+  object-fit: cover;
 }
+
+.first-picture {}
+.second-picture{}
+.third-picture{}
+.fourth-picture{}
+.fifth-picture{}
+.sixth-picture{}
+.seventh-picture{}
+.eighth-picture{}
+
 
 .card__like {
   display: flex;
@@ -300,6 +311,10 @@
   to {transform:scale(1.5);}
 }
 
+.sparks{
+  opacity: 0;
+}
+
 .like-icon.is-liked .sparks {
   animation:  0.3s ease-in 0.3s 1 alternate sparks;
 }
@@ -309,10 +324,6 @@
   to {opacity:1;}
 }
 
-
-.sparks{
-  opacity: 0;
-}
 
 .card__like-button {
   position: relative;
