@@ -222,14 +222,37 @@
   position: relative;
 }
 
-.first-picture {}
-.second-picture{}
-.third-picture{}
-.fourth-picture{}
-.fifth-picture{}
-.sixth-picture{}
-.seventh-picture{}
-.eighth-picture{}
+.first-picture {
+  filter: opacity(0.8);
+}
+
+.second-picture{
+  filter: sepia(80%) blur(0.2rem);
+}
+
+.third-picture{
+  filter: saturate(258%);
+}
+
+.fourth-picture{
+  filter: grayscale(0.3);
+}
+
+.fifth-picture{
+  filter: hue-rotate(90deg);
+}
+
+.sixth-picture{
+  filter: invert(80%) hue-rotate(100deg);
+}
+
+.seventh-picture{
+  filter: contrast(50%);
+}
+
+.eighth-picture{
+  filter: brightness(70%) saturate(60%) hue-rotate(90deg);
+}
 
 
 .card__like {
