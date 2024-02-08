@@ -89,6 +89,10 @@
   border: none;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .theme-menu__button {
   position: relative;
   text-transform: uppercase;
@@ -426,8 +430,6 @@
   position: relative;
   color: var(--button-text--color);
   mix-blend-mode: difference;
-  width: 21px;
-  height: 21px;
 }
 
 .footer__button:focus {
@@ -453,11 +455,90 @@
   transition: 0.5s ease-in-out;
 }
 
-
 .footer__button:focus  {
   outline:none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
   transition: var(--transition);
+}
+
+.modal__window {
+  position: relative;
+  width: 341px;
+  height: 195px;
+  background-color: var(--bg-color);
+  border: var(--brd);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.1s ;
+}
+
+dialog[open] {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.modal__message {
+  max-width: 257px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.modal__button {
+  width: 257px;
+  height: 38px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: var(--brd);
+  position: relative;
+  overflow: hidden;
+}
+
+.modal__button::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: 0.5s ease-in-out;
+}
+
+.modal__button:hover::before {
+  z-index: 0;
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+
+.modal__button:focus  {
+  outline:none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  transition: var(--transition);
+}
+
+.modal__text {
+  line-height: 1.5; /* 21px */
+  text-transform: uppercase;
+}
+
+.modal__floppy {
+  width: 100%;
+  align-self: center;
 }
 
 
@@ -493,6 +574,7 @@
     flex-direction: row;
     margin-block-end: 104px;
   }
+
 }
 
 @media (width > 1440px) {

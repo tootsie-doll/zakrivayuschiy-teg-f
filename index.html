@@ -330,17 +330,33 @@
           </button>
         </div>
       </div>
-
     </main>
   <footer class="footer">
-    <button class="footer__button button">
-      <svg viewBox="0 0 28 28" class="floppy button">
-        <use xlink:href="svg/floppy.svg#floppy-1" stroke-width="1"/>
+    <button class="footer__button button"
+            type="button"
+            onclick="window['dialog-id'].showModal()"
+            aria-controls="dialog-id">
+      <svg  width="28" height="28" viewBox="0 0 28 28" class="floppy button">
+        <use xlink:href="svg/floppy.svg#floppy"/>
       </svg>
-      <span class="button__text">Сохранить на память</span>
+      <span class="button__text" >Сохранить на память</span>
     </button>
   </footer>
   </div>
+  <dialog class="modal__window" id="dialog-id">
+    <div class="modal__message">
+      <svg width="39" height="39" viewBox="0 0 39 39" class="floppy modal__floppy button">
+        <use xlink:href="svg/floppy.svg#floppy"/>
+      </svg>
+      <p class="button__text modal__text">Вставьте
+        дискету, чтобы продолжить</p>
+    </div>
+    <button class="modal__button button"
+          type="button"
+          onclick="window['dialog-id'].close()">
+      <span class="button__text">OK</span>
+</button>
+  </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
