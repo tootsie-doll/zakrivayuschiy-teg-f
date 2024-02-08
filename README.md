@@ -2,7 +2,7 @@
 <hr>
 
 
-[Посмотреть верстку](https://github.com/tootsie-doll/zakrivayuschiy-teg-f-main.git)
+https://github.com/tootsie-doll/zakrivayuschiy-teg-f-main.git
 
 <hr>
 
