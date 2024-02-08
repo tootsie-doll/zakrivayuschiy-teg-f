@@ -25,6 +25,13 @@
   color: var(--accent-color);
 }
 
+@supports (font-variation-settings: "wght" 400) {
+  .page {
+    font-family: var(--main-font), sans-serif;
+    font-variation-settings: "wght" 400;
+  }
+}
+
 .container {
   position: absolute;
   top: 0;
@@ -176,6 +183,21 @@
   line-height: normal;
 }
 
+
+@supports (font-variation-settings: "wght" 700) {
+  .title {
+    font-family: var(--main-font), sans-serif;
+    font-variation-settings: "wght" 700;
+  }
+}
+
+@supports (font-variation-settings: "wght" 785) {
+  .title {
+    font-family: var(--main-font), sans-serif;
+    font-variation-settings: "wght" 785;
+  }
+}
+
 .card__description {
   display: grid;
   gap: 27px;
@@ -188,6 +210,22 @@
 .text {
   font-weight: var(--wgth-text);
 }
+
+
+@supports (font-variation-settings: "wght" 400) {
+  .text {
+    font-family: var(--main-font), sans-serif;
+    font-variation-settings: "wght" 400;
+  }
+}
+
+@supports (font-variation-settings: "wght" 465) {
+  .text {
+    font-family: var(--main-font), sans-serif;
+    font-variation-settings: "wght" 465;
+  }
+}
+
 
 .picture__group {
   width: 100%;
