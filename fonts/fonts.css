@@ -2,10 +2,12 @@
 @font-face {
     font-family: 'Inter-Variable';
     src:
-        local('Inter-Variable'),
-        url('Inter-Variable.woff2') format('woff2');
+    local('Inter-Variable'),
+    url('Inter-Variable.woff2') format('woff2-variations'),
+    url('Inter-Variable.woff2') format('woff2');
     font-display: swap;
     font-weight:  400 785;
+    font-variation-settings:  "wght" 400, "wght" 465, "wght" 700, "wght" 785;
 }
 
 @font-face {

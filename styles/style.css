@@ -25,9 +25,10 @@
   color: var(--accent-color);
 }
 
-@supports (font-variation-settings: normal) {
+@supports (font-variation-settings: "wght" 400) {
   .page {
     font-family: var(--main-font), sans-serif;
+    font-variation-settings: "wght" 400;
   }
 }
 
@@ -53,7 +54,7 @@
   flex-direction: column;
 }
 
-.header{
+.header {
   width: 100%;
   min-height: 323px;
   border: var(--brd);
@@ -117,7 +118,7 @@
   pointer-events: none;
 }
 
-.theme-menu__button:disabled::before{
+.theme-menu__button:disabled::before {
   position: absolute;
   content:"▶";
   left: -15px;
@@ -125,11 +126,15 @@
 }
 
 @keyframes move {
-  0% {transform: translate(0px, 0px);}
-  100% {transform: translate(4px, 0px);}
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(4px, 0px);
+  }
 }
 
-.theme-menu__button::after{
+.theme-menu__button::after {
   content:" ";
   position: absolute;
   left: 0;
@@ -142,7 +147,7 @@
   transition: transform 0.5s ease;
 }
 
-.theme-menu__button:focus-visible::after{
+.theme-menu__button:focus-visible::after {
   content:" ";
   position: absolute;
   left: 0;
@@ -230,31 +235,31 @@
   filter: opacity(0.8);
 }
 
-.second-picture{
+.second-picture {
   filter: sepia(80%) blur(0.2rem);
 }
 
-.third-picture{
+.third-picture {
   filter: saturate(258%);
 }
 
-.fourth-picture{
+.fourth-picture {
   filter: grayscale(0.3);
 }
 
-.fifth-picture{
+.fifth-picture {
   filter: hue-rotate(90deg);
 }
 
-.sixth-picture{
+.sixth-picture {
   filter: invert(80%) hue-rotate(100deg);
 }
 
-.seventh-picture{
+.seventh-picture {
   filter: contrast(50%);
 }
 
-.eighth-picture{
+.eighth-picture {
   filter: brightness(70%) saturate(60%) hue-rotate(90deg);
 }
 
@@ -336,11 +341,15 @@
 }
 
 @keyframes more {
-  from {transform: scale(1);}
-  to {transform:scale(1.5);}
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform:scale(1.5);
+  }
 }
 
-.sparks{
+.sparks {
   opacity: 0;
 }
 
@@ -349,8 +358,12 @@
 }
 
 @keyframes sparks {
-  from {opacity: 0;}
-  to {opacity:1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+  }
 }
 
 
@@ -455,7 +468,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.footer__button:focus  {
+.footer__button:focus {
   outline:none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
   transition: var(--transition);
@@ -525,7 +538,7 @@ dialog::backdrop {
   transition: 0.5s ease-in-out;
 }
 
-.modal__button:focus  {
+.modal__button:focus {
   outline:none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
   transition: var(--transition);
@@ -546,7 +559,7 @@ dialog::backdrop {
 
 @media (375px < width <= 1440px) {
 
-  .container{
+  .container {
     min-block-size: clamp(41.688rem, 35.239rem + 27.512vw, 60rem);
   }
 
