@@ -618,7 +618,7 @@ dialog::backdrop {
   }
 
   .modal__window {
-    max-width: 341px;
+    max-width: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
   }
 }
 
