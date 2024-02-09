@@ -505,7 +505,7 @@
 
 .modal__window {
   position: relative;
-  width: 341px;
+  width: 90%;
   height: 195px;
   background-color: var(--bg-color);
   border: var(--brd);
@@ -617,6 +617,9 @@ dialog::backdrop {
     margin-block-end: 104px;
   }
 
+  .modal__window {
+    max-width: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
+  }
 }
 
 @media (width > 1440px) {
@@ -643,6 +646,10 @@ dialog::backdrop {
     height: 51px;
     flex-direction: row;
     margin-block-end: 104px;
+  }
+
+  .modal__window {
+    max-width: 357px;
   }
 
 }
