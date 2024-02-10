@@ -324,25 +324,8 @@
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon.is-liked .main-body {
-  fill: var(--sparks-color);
-  transition: fill 0.3s 0.05s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--sparks-color);
-}
-
-.like-icon.is-liked .heart {
-  animation: 0.3s ease-in 0.1s 1 alternate more;
-}
-
 .sparks {
   opacity: 0;
-}
-
-.like-icon.is-liked .sparks {
-  animation:  0.3s ease-in 0.3s 1 alternate sparks;
 }
 
 .card__like-button {
