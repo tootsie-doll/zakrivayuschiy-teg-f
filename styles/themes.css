@@ -13,8 +13,8 @@
     --accent-color: #000;
     --main-font:'Inter-Variable';
     --accent-font:'PressStart2P';
-    --wgth-text: 400;
-    --wgth-title: 700;
+    --wgth-text: "wght" 400;
+    --wgth-title: "wght" 700;
     --brd: 2px solid var(--accent-color);
     --multi-repeating-linear:
             repeating-linear-gradient(
@@ -43,8 +43,8 @@
     --button-text--color: #00CC14;
     --bg-color: #000;
     --accent-color: #00CC14;
-    --wgth-text: 465;
-    --wgth-title: 785;
+    --wgth-text: "wght" 465;
+    --wgth-title: "wght" 785;
     --brd: 2px solid var(--accent-color);
     --multi-repeating-linear:
     repeating-linear-gradient(
@@ -67,6 +67,7 @@
     --transition: 0.5s ease;
 }
 
+
 @media (prefers-color-scheme: dark) {
     /* Дублируем переменные темной темы */
     :root {
@@ -75,8 +76,8 @@
         --button-text--color: #00CC14;
         --bg-color: #000;
         --accent-color: #00CC14;
-        --wgth-text: 465;
-        --wgth-title: 785;
+        --wgth-text: "wght" 465;
+        --wgth-title: "wght" 785;
         --brd: 2px solid var(--accent-color);
         --multi-repeating-linear: repeating-linear-gradient(
                 to right,

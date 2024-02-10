@@ -7,8 +7,8 @@
     --accent-color: #000;
     --main-font:'Inter-Variable';
     --accent-font:'PressStart2P';
-    --wgth-text: 400;
-    --wgth-title: 700;
+    --wgth-text: "wght" 400;
+    --wgth-title: "wght" 700;
     --brd: 2px solid var(--accent-color);
     --multi-repeating-linear:
         repeating-linear-gradient(
